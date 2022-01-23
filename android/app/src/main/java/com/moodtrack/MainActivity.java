@@ -1,3 +1,4 @@
+import android.os.Bundle;
 package com.moodtrack;
 
 import com.facebook.react.ReactActivity;
@@ -12,4 +13,8 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "MoodTrack";
   }
+  // @Override
+  // protected void onCreate(Bundle savedInstanceState) {
+  // super.onCreate(null);
+  // }
 }
