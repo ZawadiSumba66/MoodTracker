@@ -11,13 +11,13 @@ const moodOptions: MoodOptionType[] = [
   { emoji: '😤', description: 'frustrated' },
 ];
 
-export const MoodPicker: React.FC = props => {
+export const MoodPicker: React.FC = () => {
   const [selectedMood, setSelectedMood] = useState<MoodOptionType>();
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>How are you right now?</Text>
       <View style={styles.moodList}>
-        {moodOptions.map(option => (
+        {moodOptions.map((option) => (
           <View>
             <Pressable
               key={option.emoji}
@@ -27,7 +27,8 @@ export const MoodPicker: React.FC = props => {
                 selectedMood?.emoji === option.emoji
                   ? styles.selectedMoodItem
                   : undefined,
-              ]}>
+              ]}
+            >
               <Text>{option.emoji}</Text>
             </Pressable>
             <Text style={styles.descriptionText}>
