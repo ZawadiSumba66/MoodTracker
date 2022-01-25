@@ -63,6 +63,7 @@ export const AppProvider: React.FC = ({ children }) => {
     fetchAppData();
   }, []);
   return (
+    /* passed down to the children but onli accessd via use context*/
     <AppContext.Provider value={{ moodList, handleSelectMood }}>
       {children}
     </AppContext.Provider>
