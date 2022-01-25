@@ -13,18 +13,21 @@ export const BottomTabsNavigator: React.FC = () => {
   return (
     <BottomTabs.Navigator
       screenOptions={({ route }) => ({
+        headerTitleStyle: {
+          fontFamily: theme.fontFamilyRegular,
+        },
         tabBarShowLabel: false,
         tabBarActiveTintColor: theme.colorBlue, //gives color to the icons if the
         tabBarInactiveTintColor: theme.colorGrey, // color prop in tabBarIcon is not passed
-        tabBarIcon: ({ size }) => {
+        tabBarIcon: ({ size, color }) => {
           if (route.name === 'Home') {
-            return <HomeIcon size={size} />;
+            return <HomeIcon size={size} color={color} />;
           }
           if (route.name === 'History') {
-            return <HistoryIcon size={size} />;
+            return <HistoryIcon size={size} color={color} />;
           }
           if (route.name === 'Analytics') {
-            return <AnalyticsIcon size={size} />;
+            return <AnalyticsIcon size={size} color={color} />;
           }
           return <Text>{route.name}</Text>;
         },
