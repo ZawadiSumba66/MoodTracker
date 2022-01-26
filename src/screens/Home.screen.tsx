@@ -6,7 +6,8 @@ const imageUrl =
   'https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1766&q=80';
 export const Home: React.FC = () => {
   const appContext = useAppContext();
-  /* network image, alwaya need dimensions inorder to render */
+  /* network image, alwaya need dimensions inorder to render but since here its a background image, we'
+  just use flex 1*/
   return (
     <ImageBackground source={{ uri: imageUrl }} style={styles.container}>
       <MoodPicker handleSelectMood={appContext.handleSelectMood} />
